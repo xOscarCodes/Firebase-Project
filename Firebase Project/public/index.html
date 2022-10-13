@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Lights
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('index.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+    </style>
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  
+  <script src="script.js"></script>
+
+  <div class="area">T r a f f i c - L i g h t</div>
+  
+  <button class="button1" onclick="ledRED()">RED</button>
+  <p></p>
+  <button class="button2" onclick="ledYELLOW()">YELLOW</button>
+  <p></p>
+  <button class="button3" onclick="ledGREEN()">GREEN</button>
+  <p></p>
+  <button class="button4" onclick="ledOFF()">OFF</button>
+</body>
