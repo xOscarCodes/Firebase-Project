@@ -9,8 +9,8 @@
 char ssid[] = SSID;
 char pass[] = PASSWORD;
 
-FirebaseData object;
-String path = "/status";
+FirebaseData object;      //creating an object of FirebaseDatabase
+String path = "/status";  
 
 #define REDLed 4
 #define YELLOWLed 5
@@ -36,8 +36,8 @@ void setup()
   Serial.println(WiFi.localIP());
   Serial.println();
 
-  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH, ssid, pass);
-  Firebase.reconnectWiFi(true);
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH, ssid, pass); //Connecting to firebase 
+  Firebase.reconnectWiFi(true); 
 
   if (Firebase.setString(object, path, "OFF"))
   {
@@ -51,9 +51,9 @@ void setup()
 
 void loop()
 {
-  if (Firebase.getString(object, path))
+  if (Firebase.getString(object, path)) //getting string stored at the path
   {
-    turnOnLED(object.stringData());
+    turnOnLED(object.stringData());     //passing the obtained string(colour) to function
   }
   else
   {
